@@ -3,13 +3,6 @@ using namespace std;
 
 const int N = 3e5 + 9;
 
-/*
--> diff(v) = len(v) - len(link(v))
--> series link will lead from the vertex v to the vertex u corresponding
-   to the maximum suffix palindrome of v which satisfies diff(v) != diff(u)
--> path within series links to the root contains only O(log n) vertices
--> cnt contains the number of palindromic suffixes of the node
-*/
 struct PalindromicTree {
   struct node {
     int nxt[26], len, st, en, link, diff, slink, cnt, oc;
